@@ -38,6 +38,7 @@ Um projeto fullstack simples para gestão de tarefas.
 - PostgreSQL
 - Next.js
 - Tailwindcss
+- Jest
 
 <br>
 
