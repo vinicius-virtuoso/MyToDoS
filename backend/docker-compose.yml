@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: vini
+      POSTGRES_DB: db_todo
+    volumes:
+      - ./pgdata:/var/lib/postgres/data
+    ports:
+      - "5432:5432"
+  app:
+    container_name: todo-api
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/app/todo-app-api
+    depends_on:
+      - db
+    command: ["./wait-for-db.sh"]
