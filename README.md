@@ -1,4 +1,4 @@
-<h1 align="center">Habits</h1>
+<h1 align="center">MyToDoS</h1>
 
 <div align="center">
 
